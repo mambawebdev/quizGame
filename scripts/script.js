@@ -585,6 +585,16 @@ const quizQuestions = [
   }
 ];
 
+// Randomize answer order for every question
+quizQuestions.forEach(q => shuffleArray(q.answers));
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 // QUIZ STATE
 let currentQuestionIndex = 0;
 let score = 0;
