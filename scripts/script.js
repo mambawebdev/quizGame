@@ -587,6 +587,7 @@ const quizQuestions = [
 
 // Randomize answer order for every question
 quizQuestions.forEach(q => shuffleArray(q.answers));
+shuffleArray(quizQuestions);
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
